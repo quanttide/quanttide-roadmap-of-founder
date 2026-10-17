@@ -1,0 +1,14 @@
+version: 1
+project:
+  title: 量潮创始人路线图
+  description: 量潮创始人路线图 - 愿景、选择与待定方向
+  keywords: [量潮创始人, 路线图]
+  authors:
+    - name: 量潮科技
+  license: CC-BY-4.0
+  toc:
+    - file: index.md
+site:
+  template: book-theme
+  options:
+    folders: true
