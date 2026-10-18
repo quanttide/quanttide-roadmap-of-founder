@@ -6,5 +6,4 @@
 
 ## 目录
 
-- [work/clarify-intent.md](./work/clarify-intent.md)：澄清意图（含 skill 流程）。
-- [work/clarify-intent-cli.md](./work/clarify-intent-cli.md)：澄清意图的命令行与字段。
+- [work/clarify-intent.md](./work/clarify-intent.md)：澄清意图（含 skill 流程；命令行见 lab 仓 `docs/dev-guide/clarify-intent.md`）。

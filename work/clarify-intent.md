@@ -2,7 +2,7 @@
 
 跟 AI 干活时那句「不对劲」通常没有留下痕迹：忍了、凑合改，下次再忍。这个工具把那个瞬间记下来——我以为它知道什么、它实际做了什么——当场给出一段能粘回对话的话；同一类差出现第二次，问你要不要立成一条规则。规则是你的，换哪个 AI 客户端都带着走。
 
-命令行两个入口：名词 `qtfounder work intent` 看意图，动词 `qtfounder work clarify` 澄清一次。用法见 [clarify-intent-cli.md](./clarify-intent-cli.md)。
+命令行两个入口：名词 `qtfounder work intent` 看意图，动词 `qtfounder work clarify` 澄清一次。命令与字段见 quanttide-founder-lab 的 `docs/dev-guide/clarify-intent.md`。
 
 ## 目标
 
