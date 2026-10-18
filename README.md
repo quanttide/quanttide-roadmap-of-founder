@@ -8,7 +8,7 @@
 
 - [work/](./work/)：工作主线的方向层。
   - [clarify-intent.md](./work/clarify-intent.md)：澄清意图（目标、核心问题、已/待决策，含 skill 流程）。
-  - [clarify-intent-cli.md](./work/clarify-intent-cli.md)：澄清意图的命令行与字段（一条命令，四个开关）。
+  - [clarify-intent-cli.md](./work/clarify-intent-cli.md)：澄清意图的命令行与字段（名词 `intent` + 动词 `clarify` 两个入口）。
 
 ## 格式
 
