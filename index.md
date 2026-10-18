@@ -6,4 +6,4 @@
 
 ## 目录
 
-- [work/clarify-intent.md](./work/clarify-intent.md)：澄清意图（含 skill 流程；命令行见 lab 仓 `docs/dev-guide/clarify-intent.md`）。
+- 暂无。澄清意图已迁出至 `quanttide-report-of-founder` 的 `work/clarify-intent.md`。

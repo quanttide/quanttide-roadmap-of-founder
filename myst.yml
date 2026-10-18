@@ -8,9 +8,6 @@ project:
   license: CC-BY-4.0
   toc:
     - file: index.md
-    - title: 工作
-      children:
-        - file: work/clarify-intent.md
 site:
   template: book-theme
   options:
