@@ -12,4 +12,5 @@
 
 ### 新增
 
-- 初始化路线图仓库：`README.md`、`index.md`（入口，待补充）、`myst.yml`
+- 初始化路线图仓库：`README.md`、`index.md`（入口）、`myst.yml`
+- 迁入 `work/`：澄清意图三篇（`clarify-intent.md`、`clarify-intent-cli.md`、`clarify-intent-skill.md`），源自 `data/context/work/roadmap/`；命令行前缀统一修正为 `qtfounder work clarify`，改名为「澄清意图」

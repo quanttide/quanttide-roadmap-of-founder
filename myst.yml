@@ -8,6 +8,11 @@ project:
   license: CC-BY-4.0
   toc:
     - file: index.md
+    - title: 工作
+      children:
+        - file: work/clarify-intent.md
+        - file: work/clarify-intent-cli.md
+        - file: work/clarify-intent-skill.md
 site:
   template: book-theme
   options:
