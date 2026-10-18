@@ -6,4 +6,4 @@
 
 ## 目录
 
-- 暂无。澄清意图已迁出至 `quanttide-report-of-founder` 的 `work/clarify-intent.md`。
+- 暂无。澄清意图已迁出至 `quanttide-report-of-founder` 的 `code/clarify-intent.md`。

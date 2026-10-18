@@ -18,4 +18,4 @@
 
 ### 变更
 
-- `work/clarify-intent.md` 迁出至 `quanttide-report-of-founder` 的 `work/clarify-intent.md`：这项工作已从「方向」变成「实现状态与关键设计」，按层归口进报告；本仓只留指针，命令与字段仍在 lab 仓的 dev-guide 与接口参考
+- `work/clarify-intent.md` 迁出至 `quanttide-report-of-founder` 的 `code/clarify-intent.md`（该仓的 `work/` 随后更名为 `code/`，命令行入口同步为 `code intent` / `code clarify`）：这项工作已从「方向」变成「实现状态与关键设计」，按层归口进报告；本仓只留指针，命令与字段仍在 lab 仓的 dev-guide 与接口参考
