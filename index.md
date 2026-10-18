@@ -6,6 +6,5 @@
 
 ## 目录
 
-- [work/clarify-intent.md](./work/clarify-intent.md)：澄清意图。
-- [work/clarify-intent-cli.md](./work/clarify-intent-cli.md)：澄清意图的命令行与 HTTP 契约。
-- [work/clarify-intent-skill.md](./work/clarify-intent-skill.md)：澄清意图的 skill 流程。
+- [work/clarify-intent.md](./work/clarify-intent.md)：澄清意图（含 skill 流程）。
+- [work/clarify-intent-cli.md](./work/clarify-intent-cli.md)：澄清意图的命令行与字段。

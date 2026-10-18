@@ -12,7 +12,6 @@ project:
       children:
         - file: work/clarify-intent.md
         - file: work/clarify-intent-cli.md
-        - file: work/clarify-intent-skill.md
 site:
   template: book-theme
   options:
