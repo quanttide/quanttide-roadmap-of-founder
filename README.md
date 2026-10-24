@@ -16,6 +16,7 @@
 ## 文档
 
 - [index.md](index.md)
+- [agent/agent-harness.md](agent/agent-harness.md)
 - [work/quanttide-pay.md](work/quanttide-pay.md)
 
 ## 约定
