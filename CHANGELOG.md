@@ -21,6 +21,7 @@
 
 ### Removed
 
+- `work/quanttide-pay.md`：归口进 `data/profile` 的 `execute/`，本仓不再承载支付工程的执行方向
 - `agent/agent-harness.md`：闸门、体检、巡检三件都已落地；仅剩的术语存量归 `language/governance.md`，本仓不再单设 agent 方向
 
 ### 变更
