@@ -17,6 +17,7 @@
 - 初始化路线图仓库：`README.md`、`index.md`（入口）、`myst.yml`
 - 迁入 `work/clarify-intent.md`：澄清意图的方向层（目标、核心问题、已/待决策，含 skill 流程），源自 `data/context/work/roadmap/` 的三篇草稿，整理时命名统一为「澄清意图」、skill 篇并入本篇并砍掉「命名状态」那一步、待决策收敛为存储落点一条
 - 命令与字段另立一篇，落 `quanttide-founder-lab` 的 `docs/dev-guide/clarify-intent.md`（不进本仓：方向层归路线图，敲法归开发指南）
+- `language/governance.md`：术语治理清单——十六个词的现存量与先判什么，外加出库与改名的三个判断口；方法落在 Skill `language-governance`
 
 ### 变更
 

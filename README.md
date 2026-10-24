@@ -17,6 +17,7 @@
 
 - [index.md](index.md)
 - [agent/agent-harness.md](agent/agent-harness.md)
+- [language/governance.md](language/governance.md)
 - [work/quanttide-pay.md](work/quanttide-pay.md)
 
 ## 约定
