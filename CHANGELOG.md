@@ -20,6 +20,8 @@
 
 ### 变更
 
+- `agent/agent-harness.md`：校验单元与度量两节己完成，按约定从近景移除；正文保留巡检、闸门、审计报告三节
+
 - `README.md`、`index.md`：有意精简为标题与许可（`index.md` 仅保留「首页」），正文不再承载定位、目录与格式约定
 - **格式约定废弃**：原「章节按序出现，空节省略：目标（含元目标）→ 核心问题 → 已决策 → 待决策；已决策须有行动佐证，待决策须写清卡在哪」不再适用，主题文件改为散文直述。同域仍按旧约定表述的位置（语境仓 README 与 journal-to-roadmap skill）待同步
 - `work/clarify-intent.md` 迁出至 `quanttide-report-of-founder` 的 `code/clarify-intent.md`（该仓的 `work/` 随后更名为 `code/`，命令行入口同步为 `code intent` / `code clarify`）：这项工作已从「方向」变成「实现状态与关键设计」，按层归口进报告；本仓只留指针，命令与字段仍在 lab 仓的 dev-guide 与接口参考
