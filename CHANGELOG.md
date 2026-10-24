@@ -20,6 +20,7 @@
 
 ### 变更
 
+- `agent/agent-harness.md`：巡检已完成，本节从近景移除；正文改为闸门拦什么与术语存量两件，巡检结论指向 `data/report/agent/corpus-patrol.md`
 - `agent/agent-harness.md`：体检报告接上，本节从近景移除；正文只剩巡检，先说清它给闸门与报告提供基线
 - `agent/agent-harness.md`：闸门已装在提交那一刻，本节从近景移除；正文改为先做巡检，用存量重判给闸门一个基线，审计报告放最后
 - `agent/agent-harness.md`：校验单元与度量两节已完成，按约定从近景移除
