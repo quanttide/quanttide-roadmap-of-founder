@@ -19,6 +19,10 @@
 - 命令与字段另立一篇，落 `quanttide-founder-lab` 的 `docs/dev-guide/clarify-intent.md`（不进本仓：方向层归路线图，敲法归开发指南）
 - `language/governance.md`：术语治理清单——十六个词的现存量与先判什么，外加出库与改名的三个判断口；方法落在 Skill `language-governance`
 
+### Removed
+
+- `agent/agent-harness.md`：闸门、体检、巡检三件都已落地；仅剩的术语存量归 `language/governance.md`，本仓不再单设 agent 方向
+
 ### 变更
 
 - `agent/agent-harness.md`：术语存量第二期「条目」清完，按语境换成一条、记录、清单、子项；下一期「产物」
