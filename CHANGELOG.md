@@ -12,6 +12,8 @@
 
 ### 新增
 
+- `work/novel-preference-library.md`：小说偏好库的方向——抓取只是入口、主体是偏好库；两条业务需求由一条数据处理流水线满足；适配层与领域层都是交付目标。来源是澄清记录 `clr_79SX`、`clr_WN7Y`、`clr_VDDX`，自 profile 仓 `code/requirement/` 迁入——那三条是产品需求，不属于编程需求档
+
 - `work/qtcloud-pay.md`：支付云方向——先解决支付系统的技术接管，以实训基地代金券业务作首个落地场景验证现有能力，之后再定自动化开发与公司、联盟账本的建设顺序
 - 初始化路线图仓库：`README.md`、`index.md`（入口）、`myst.yml`
 - 迁入 `work/clarify-intent.md`：澄清意图的方向层（目标、核心问题、已/待决策，含 skill 流程），源自 `data/context/work/roadmap/` 的三篇草稿，整理时命名统一为「澄清意图」、skill 篇并入本篇并砍掉「命名状态」那一步、待决策收敛为存储落点一条

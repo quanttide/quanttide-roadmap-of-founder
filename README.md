@@ -17,6 +17,7 @@
 
 - [index.md](index.md)
 - [work/quanttide-pay.md](work/quanttide-pay.md)
+- [work/novel-preference-library.md](work/novel-preference-library.md)
 
 ## 约定
 
