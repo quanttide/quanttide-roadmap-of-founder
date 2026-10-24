@@ -20,6 +20,7 @@
 
 ### 变更
 
+- `agent/agent-harness.md`：术语存量第一期「判定」清完，53 处换成判断；组件名「判定层」随之改名「判断层」。下一期「条目」
 - `agent/agent-harness.md`：闸门只拦用词完成，本节从近景移除；近景只剩术语存量，从「判定」开始改
 - `agent/agent-harness.md`：巡检已完成，本节从近景移除；正文改为闸门拦什么与术语存量两件，巡检结论指向 `data/report/agent/corpus-patrol.md`
 - `agent/agent-harness.md`：体检报告接上，本节从近景移除；正文只剩巡检，先说清它给闸门与报告提供基线
