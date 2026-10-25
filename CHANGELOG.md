@@ -10,9 +10,12 @@
 
 ## [Unreleased]
 
+### 移除
+
+- `qtgame-war/code/index.md`：写完后判为洞察，移入 `quanttide-insight-of-founder` 的 `qtgame-war/code/`，本仓不留副本
+
 ### 新增
 
-- `qtgame-war/code/index.md`：迷雾中的司令部的方向与顺序——先确定性底座，再回合档案，再认知层与双 AI，最后接人类与界面；只收各稿一致的主干，分歧项列在待定
 - `agent/agent-harness.md`：Agent 协作治理方向——先清点存量写入，用数出来的量决定闸门要不要装；之后依次做写入拦截、可离开对话使用的校验单元、外人读得懂的审计报告与成本度量
 - `work/qtcloud-pay.md`：支付云方向——先解决支付系统的技术接管，以实训基地代金券业务作首个落地场景验证现有能力，之后再定自动化开发与公司、联盟账本的建设顺序
 - 初始化路线图仓库：`README.md`、`index.md`（入口）、`myst.yml`

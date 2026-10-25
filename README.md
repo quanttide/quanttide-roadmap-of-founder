@@ -17,7 +17,6 @@
 
 - [index.md](index.md)
 - [language/governance.md](language/governance.md)
-- [qtgame-war/code/index.md](qtgame-war/code/index.md)
 - [work/quanttide-pay.md](work/quanttide-pay.md)
 
 ## 约定
