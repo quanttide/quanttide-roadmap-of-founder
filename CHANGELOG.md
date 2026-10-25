@@ -16,6 +16,11 @@
 
 ### 新增
 
+- `qtgame-war/code/gates.md`：架构落成检查——M1 开工前的六项决定与五条 lint，每项都要能写成代码约束
+- `qtgame-war/code/contract.md`：系统契约的落地顺序——格式冻结、桩实现接通、真引擎回填、认知接入、甲板展开五段
+- `qtgame-war/code/params.md`：数值参数的落地顺序——区间抽取、三视角交叉、作者裁决、敏感性兜底
+- `qtgame-war/code/command.md`：指挥部侧的落地顺序——状态机与两份结构、认知与敌军指挥官、参谋与甲板、交付后的增量
+- `qtgame-war/code/acceptance.md`：验收系统的落地顺序——夹具与金标准、命令行骨架、回归与批量、迷雾与 AI 断言、人类协议、值守
 - `qtgame-war/code/index.md`：游戏《迷雾中的司令部》的四段顺序——可复算、可复盘、可对弈、可交付；每段写达成标志、顺序依据与后置代价
 - `agent/agent-harness.md`：Agent 协作治理方向——先清点存量写入，用数出来的量决定闸门要不要装；之后依次做写入拦截、可离开对话使用的校验单元、外人读得懂的审计报告与成本度量
 - `work/qtcloud-pay.md`：支付云方向——先解决支付系统的技术接管，以实训基地代金券业务作首个落地场景验证现有能力，之后再定自动化开发与公司、联盟账本的建设顺序
@@ -31,6 +36,7 @@
 
 ### 变更
 
+- `qtgame-war/code/index.md`：补「已定前提」与「分线」两节，五份专文各管一条线，四段顺序仍是唯一门槛
 - `qtgame-war/code/index.md`：补 front matter，声明体裁 roadmap、读者 maintainer
 - `qtgame-war/code/index.md`：按技术写作规范重写，补全文档范围、阶段表、达成标志与未决事项
 - `agent/agent-harness.md`：术语存量第二期「条目」清完，按语境换成一条、记录、清单、子项；下一期「产物」

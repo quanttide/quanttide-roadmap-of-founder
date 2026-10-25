@@ -9,6 +9,11 @@ project:
   toc:
     - file: index.md
     - file: qtgame-war/code/index.md
+    - file: qtgame-war/code/gates.md
+    - file: qtgame-war/code/contract.md
+    - file: qtgame-war/code/params.md
+    - file: qtgame-war/code/command.md
+    - file: qtgame-war/code/acceptance.md
 site:
   template: book-theme
   options:
