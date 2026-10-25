@@ -36,7 +36,7 @@
 
 ### 变更
 
-- `qtgame-war/game/index.md`：补「数值参数的具体落地」一节，逐组列出单位、初值、写入位置与启用阶段
+- `qtgame-war/game/index.md`：数值参数落地表迁出至 `quanttide-context-of-founder` 的 `game/roadmap/index.md`，入口篇只留架构检查
 - `qtgame-war/code/gates.md` → `qtgame-war/game/index.md`：架构检查移入游戏文件夹，作入口篇
 - `qtgame-war/code/params.md` → `qtgame-war/game/params.md`：数值参数归玩法侧，与实现顺序分开
 - `qtgame-war/code/index.md`：补「已定前提」与「分线」两节，五份专文各管一条线，四段顺序仍是唯一门槛
