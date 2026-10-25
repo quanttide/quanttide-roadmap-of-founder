@@ -1,3 +1,8 @@
+---
+genre: roadmap
+audience: maintainer
+---
+
 # 迷雾中的司令部：开发顺序
 
 ## 1. 文档范围
