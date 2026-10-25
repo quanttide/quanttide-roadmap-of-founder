@@ -373,6 +373,6 @@ M4 可交付（4–6 周）     消除 G4
 - [command.md](./command.md)：指挥部侧的状态机、认知、敌军指挥官与参谋。
 - [acceptance.md](./acceptance.md)：验收工具链的六个阶段。
 - [params.md](../game/params.md)：历史数值的区间抽取与敏感性兜底。
-- [gates.md](./gates.md)：M1 开工前的架构检查项。
+- [game/index.md](../game/index.md)：M1 开工前的架构检查项。
 
 这些线跨阶段并行，每一段的验收仍以本文的门槛为准。

@@ -16,7 +16,7 @@
 
 ### 新增
 
-- `qtgame-war/code/gates.md`：架构落成检查——M1 开工前的六项决定与五条 lint，每项都要能写成代码约束
+- `qtgame-war/game/index.md`：架构落成检查——M1 开工前的六项决定与五条 lint，每项都要能写成代码约束
 - `qtgame-war/code/contract.md`：系统契约的落地顺序——格式冻结、桩实现接通、真引擎回填、认知接入、甲板展开五段
 - `qtgame-war/game/params.md`：数值参数的落地顺序——区间抽取、三视角交叉、作者裁决、敏感性兜底
 - `qtgame-war/code/command.md`：指挥部侧的落地顺序——状态机与两份结构、认知与敌军指挥官、参谋与甲板、交付后的增量
@@ -36,6 +36,7 @@
 
 ### 变更
 
+- `qtgame-war/code/gates.md` → `qtgame-war/game/index.md`：架构检查移入游戏文件夹，作入口篇
 - `qtgame-war/code/params.md` → `qtgame-war/game/params.md`：数值参数归玩法侧，与实现顺序分开
 - `qtgame-war/code/index.md`：补「已定前提」与「分线」两节，五份专文各管一条线，四段顺序仍是唯一门槛
 - `qtgame-war/code/index.md`：补 front matter，声明体裁 roadmap、读者 maintainer
