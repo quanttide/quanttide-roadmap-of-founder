@@ -12,10 +12,11 @@
 
 ### 移除
 
-- `qtgame-war/code/index.md`：写完后判为洞察，移入 `quanttide-insight-of-founder` 的 `qtgame-war/code/`，本仓不留副本
+- `work/quanttide-pay.md` 的目录链接：文件已于此前移除，README 索引同步删去
 
 ### 新增
 
+- `qtgame-war/code/index.md`：游戏《迷雾中的司令部》的四段顺序——可复算、可复盘、可对弈、可交付；每段写达成标志、顺序依据与后置代价
 - `agent/agent-harness.md`：Agent 协作治理方向——先清点存量写入，用数出来的量决定闸门要不要装；之后依次做写入拦截、可离开对话使用的校验单元、外人读得懂的审计报告与成本度量
 - `work/qtcloud-pay.md`：支付云方向——先解决支付系统的技术接管，以实训基地代金券业务作首个落地场景验证现有能力，之后再定自动化开发与公司、联盟账本的建设顺序
 - 初始化路线图仓库：`README.md`、`index.md`（入口）、`myst.yml`
