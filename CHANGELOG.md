@@ -36,6 +36,7 @@
 
 ### 变更
 
+- `language/governance.md`：术语存量重数（10-25 全仓 247 个命中、十八个词），清单按「直接换词」与「先判归属」分两表；补语境声明的边界，顺序改为产物先行、账本改名在后、回潮两处顺手清
 - `qtgame-war/game/index.md`：数值参数落地表迁出至 `quanttide-context-of-founder` 的 `game/roadmap/index.md`，入口篇只留架构检查
 - `qtgame-war/code/gates.md` → `qtgame-war/game/index.md`：架构检查移入游戏文件夹，作入口篇
 - `qtgame-war/code/params.md` → `qtgame-war/game/params.md`：数值参数归玩法侧，与实现顺序分开
