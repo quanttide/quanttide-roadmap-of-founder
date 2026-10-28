@@ -16,7 +16,7 @@
 ## 文档
 
 - [index.md](index.md)
-- [language/governance.md](language/governance.md)
+- [qtfounder/language.md](qtfounder/language.md)
 - [qtfounder/roadmap.md](qtfounder/roadmap.md)
 - [qtgame-war/code/index.md](qtgame-war/code/index.md)
 

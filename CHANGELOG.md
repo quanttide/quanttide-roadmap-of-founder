@@ -10,6 +10,10 @@
 
 ## [Unreleased]
 
+### 变更
+
+- `language/governance.md` 迁至 `qtfounder/language.md`：术语治理清单随领域归并，`language/` 不再单设目录；正文未改，主仓 AGENTS.md 与本仓 README 索引同步
+
 ### 移除
 
 - `work/quanttide-pay.md` 的目录链接：文件已于此前移除，README 索引同步删去
