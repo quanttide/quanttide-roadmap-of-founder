@@ -16,6 +16,7 @@
 
 ### 新增
 
+- `qtfounder/roadmap.md`：qtfounder 平台路线图，自应用仓 `apps/qtfounder/src/cli/docs/dev-guide/roadmap.md` 迁入（CLI v0.1 收尾、迁移、新增三段）；新增「qtcloud 组织验证」一节——探底噪、真实交付对照、漏率刻度三步，外加三条缺口，先记顺序不实现
 - `qtgame-war/game/index.md`：架构落成检查——M1 开工前的六项决定与五条 lint，每项都要能写成代码约束
 - `qtgame-war/code/contract.md`：系统契约的落地顺序——格式冻结、桩实现接通、真引擎回填、认知接入、甲板展开五段
 - `qtgame-war/game/params.md`：数值参数的落地顺序——区间抽取、三视角交叉、作者裁决、敏感性兜底
