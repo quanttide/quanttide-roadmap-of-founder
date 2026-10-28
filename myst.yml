@@ -8,7 +8,7 @@ project:
   license: CC-BY-4.0
   toc:
     - file: index.md
-    - file: qtfounder/roadmap.md
+    - file: qtfounder/index.md
     - file: qtgame-war/code/index.md
     - file: qtgame-war/code/contract.md
     - file: qtgame-war/game/index.md
