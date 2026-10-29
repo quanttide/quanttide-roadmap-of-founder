@@ -12,6 +12,8 @@
 
 ### 变更
 
+- `qtfounder/index.md`：退出码四码的落点从 toolkit 改为 CLI 仓 `core` 模块（`src/cli/src/core/exit.rs`）——少一层跨仓依赖，qtcloud 复制成本低；toolkit 路线图随之清空，两仓 CHANGELOG 同步
+
 - `qtfounder/index.md`：CLI v0.1 补一行方向输入——模型漂移与框架跟不上的日志体感（2026-10-28），后续增量以「减少漂移、加固框架」为衡量标准，具体化随冻结收口专门会话一并落
 
 - `qtfounder/index.md`：冻结收口暂缓一行——等 v0.1 方向积累清楚后专门一次处理（收口、验收、打 tag 同一会话），不随当前节奏走；「怎么做」仍在 toolkit 仓 `packages/rust/ROADMAP.md`，「什么时候做」只活在本仓
