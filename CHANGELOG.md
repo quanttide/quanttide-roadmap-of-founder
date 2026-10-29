@@ -12,6 +12,8 @@
 
 ### 变更
 
+- `qtfounder/docs.md`：文档审计路线图自 CLI 仓 `src/cli/docs/dev-guide/docs/roadmap.md` 迁入——CLI 的方向文档全部归本仓；`qtfounder/index.md` 、README 索引与 `myst.yml` 目录同步，README 约定句改为现状（方向归本仓、应用仓只留实现细节）
+
 - 清理已完成与过时信息：`qtfounder/index.md` 删去 CLI v0.1 六条已落地范围项与已完成的兼容规则项、修正过时的版本描述（0.0.9 → 0.0.41），范围只剩退出码收口（实现在 toolkit 仓 `packages/rust/ROADMAP.md`）；`myst.yml` 目录与 README 文档索引从已删除的 `qtgame-war/code/`、`game/` 旧结构换为 v0.x 版本文件；`qtgame-war/index.md` 删去「studio/ROADMAP.md 已收归为薄指针」的失实表述（该文件实为独立清单）
 - `qtfounder/index.md`：阈值标定勾选——两组语料实测后块占比无判别力保持关闭、无散文率定 0.35、列表单项字数 100→120；数字与理由的事实源在 CLI 契约注释
 - `qtfounder/index.md`：CLI v0.1 补两条冻结收口（退出码语义统一、兼容规则落 CLI 仓 CONTRIBUTING），验收加 Skill 漂移检查——0.1 起命令面按语义化版本冻结，破坏性变更 bump minor

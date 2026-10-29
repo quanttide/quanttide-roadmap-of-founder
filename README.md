@@ -18,12 +18,13 @@
 - [index.md](index.md)
 - [qtfounder/index.md](qtfounder/index.md)
 - [qtfounder/language.md](qtfounder/language.md)
+- [qtfounder/docs.md](qtfounder/docs.md)（文档审计路线图，自 CLI 仓迁入）
 - [qtgame-war/index.md](qtgame-war/index.md)（版本路线图入口，v0.1.0–v0.3.0 各版本文件在其下）
 
 ## 约定
 
 - 阶段三要素：达成标志、顺序依据、后置代价；缺一项该阶段不成立。
-- 同一事项只写一处：实施步骤与代码落点归应用仓 `src/<端>/docs/dev-guide/roadmap.md`，本仓只留方向与验收标准。
+- 同一事项只写一处：方向与验收归本仓；qtfounder 的方向文档已全部迁入（`qtfounder/index.md`、`qtfounder/docs.md`），应用仓只留实现细节。
 - 复核按抽样：每阶段至少抽一条，所抽须陌生人当场可判。
 
 ## 关联

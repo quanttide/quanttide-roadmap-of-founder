@@ -15,7 +15,7 @@ audience: maintainer
 
 - [ ] 退出码收口：全仓统一四码——0 无命中、1 有命中、2 用法或环境错、3 目标缺席（现 `docs` 为 0/1/2、`product` 为 2/3 两套并存）；语义定义与实现在 toolkit 仓 `packages/rust/ROADMAP.md` 的 core/exit 一节，CLI 只消费
 
-取法与反样本目录见 CLI 仓的文档审计路线图（`apps/qtfounder/src/cli/docs/dev-guide/docs/roadmap.md`）「阶段三」。
+取法与反样本目录见[文档审计路线图](docs.md)「阶段三」。
 
 ### 不做
 

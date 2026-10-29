@@ -10,6 +10,7 @@ project:
     - file: index.md
     - file: qtfounder/index.md
     - file: qtfounder/language.md
+    - file: qtfounder/docs.md
     - file: qtgame-war/index.md
     - file: qtgame-war/v0.1.0.md
     - file: qtgame-war/v0.1.1.md
