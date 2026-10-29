@@ -16,9 +16,9 @@
 ## 文档
 
 - [index.md](index.md)
-- [qtfounder/language.md](qtfounder/language.md)
 - [qtfounder/index.md](qtfounder/index.md)
-- [qtgame-war/code/index.md](qtgame-war/code/index.md)
+- [qtfounder/language.md](qtfounder/language.md)
+- [qtgame-war/index.md](qtgame-war/index.md)（版本路线图入口，v0.1.0–v0.3.0 各版本文件在其下）
 
 ## 约定
 

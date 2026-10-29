@@ -5,22 +5,15 @@ audience: maintainer
 
 # qtfounder 路线图
 
-量潮创始人平台（qtfounder）。状态报告在 qtfounder 仓根的 `STATUS.md`（不进文档站），模块级路线图见该仓 `src/*/ROADMAP.md`。
+量潮创始人平台（qtfounder）。状态报告在 qtfounder 仓根的 `STATUS.md`（不进文档站），studio 的应用内步骤见该仓 `src/studio/ROADMAP.md`。
 
 ## CLI v0.1
 
-当前为 `cli/v0.0.9`，已落地 `code`、`language`、`docs` 三个检查器，以及认知侧的 `think load`、`think reflect`、`think model`。v0.1 的文档结构审计五项已随 v0.0.3 与 v0.0.5 提前落地，只剩阈值标定。
+当前 `cli/v0.0.41`。检查器（`code`/`language`/`docs`）与认知侧（`think`）已在 0.0.x 落地，阈值已标定，范围只剩退出码收口与验收打 tag。
 
 ### 范围
 
-- [x] 新 `docs` 子命令：表格层从 `language` 整层迁出（`table.rs`、`[table]` 契约、`Kind::Table`），`language` 不再保留表格检查
-- [x] `docs` 列表层：三段式列表项与超长列表项；契约 `[list]` 段，判断层 `src/docs/list.rs`
-- [x] 密度兜底：结构块占比与无散文率，挂在 `docs` 报告里，只出嫌疑；阈值默认关闭
-- [x] `docs check`：`.agents/skills/` 实际目录与 `AGENTS.md`、`CONTRIBUTING.md` 的索引比对
-- [x] 加粗与分割线：每千字加粗处数、一行并列加粗、整句加粗；分割线总数与紧挨标题的装饰线
-- [x] 阈值标定：两组语料各十五篇，用分位数替换 `[list]` 与密度层的待定值（实际 gallery 19 篇、roadmap 10 篇；结论——块占比无判别力保持关闭，无散文率定 0.35，列表单项字数 100→120；数字与理由在 CLI 契约注释里）
-- [ ] 冻结收口：退出码语义统一——现 `docs` 为 0/1/2、`product` 为 2/3 两套并存，冻结后再改即破坏
-- [ ] 兼容规则落 CLI 仓 `CONTRIBUTING.md`：命令、输出、退出码、落盘、契约五面，破坏（bump minor）、兼容（bump patch）、废弃不删、JSON 只增不删
+- [ ] 退出码收口：全仓统一四码——0 无命中、1 有命中、2 用法或环境错、3 目标缺席（现 `docs` 为 0/1/2、`product` 为 2/3 两套并存）；语义定义与实现在 toolkit 仓 `packages/rust/ROADMAP.md` 的 core/exit 一节，CLI 只消费
 
 取法与反样本目录见 CLI 仓的文档审计路线图（`apps/qtfounder/src/cli/docs/dev-guide/docs/roadmap.md`）「阶段三」。
 
