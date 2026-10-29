@@ -12,6 +12,7 @@
 
 ### 变更
 
+- `qtfounder/index.md`：CLI v0.1 补两条冻结收口（退出码语义统一、兼容规则落 CLI 仓 CONTRIBUTING），验收加 Skill 漂移检查——0.1 起命令面按语义化版本冻结，破坏性变更 bump minor
 - `qtfounder/roadmap.md` 改名 `qtfounder/index.md`：领域目录统一用 `index.md` 作入口，与 `qtgame-war/` 一致；本仓 README 与 `myst.yml` 目录同步，正文未改
 - `language/governance.md` 迁至 `qtfounder/language.md`：术语治理清单随领域归并，`language/` 不再单设目录；正文未改，主仓 AGENTS.md 与本仓 README 索引同步
 

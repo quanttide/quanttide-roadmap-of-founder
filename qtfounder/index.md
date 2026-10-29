@@ -19,6 +19,8 @@ audience: maintainer
 - [x] `docs check`：`.agents/skills/` 实际目录与 `AGENTS.md`、`CONTRIBUTING.md` 的索引比对
 - [x] 加粗与分割线：每千字加粗处数、一行并列加粗、整句加粗；分割线总数与紧挨标题的装饰线
 - [ ] 阈值标定：两组语料各十五篇，用分位数替换 `[list]` 与密度层的待定值
+- [ ] 冻结收口：退出码语义统一——现 `docs` 为 0/1/2、`product` 为 2/3 两套并存，冻结后再改即破坏
+- [ ] 兼容规则落 CLI 仓 `CONTRIBUTING.md`：命令、输出、退出码、落盘、契约五面，破坏（bump minor）、兼容（bump patch）、废弃不删、JSON 只增不删
 
 取法与反样本目录见 CLI 仓的文档审计路线图（`apps/qtfounder/src/cli/docs/dev-guide/docs/roadmap.md`）「阶段三」。
 
@@ -30,7 +32,7 @@ audience: maintainer
 
 ### 验收
 
-拿真实文档跑一遍，报告贴回 AI，它能按位置改完，复跑达标；`cargo test` 全绿；打 `cli/v0.1.0`。
+拿真实文档跑一遍，报告贴回 AI，它能按位置改完，复跑达标；`cargo test` 全绿；打 tag 前跑 `qtfounder agent skill install check`，确认 Skill 与命令面的漂移报得出来——Skill 正文写死命令用法，属兼容承诺的一部分；打 `cli/v0.1.0`。
 
 ## 迁移
 
