@@ -12,6 +12,8 @@
 
 ### 变更
 
+- `qtfounder/index.md`：CLI v0.1 补一行方向输入——模型漂移与框架跟不上的日志体感（2026-10-28），后续增量以「减少漂移、加固框架」为衡量标准，具体化随冻结收口专门会话一并落
+
 - `qtfounder/index.md`：冻结收口暂缓一行——等 v0.1 方向积累清楚后专门一次处理（收口、验收、打 tag 同一会话），不随当前节奏走；「怎么做」仍在 toolkit 仓 `packages/rust/ROADMAP.md`，「什么时候做」只活在本仓
 - `qtfounder/docs.md`：文档审计路线图自 CLI 仓 `src/cli/docs/dev-guide/docs/roadmap.md` 迁入——CLI 的方向文档全部归本仓；`qtfounder/index.md`、README 索引与 `myst.yml` 目录同步，README 约定句改为现状（方向归本仓、应用仓只留实现细节）
 
