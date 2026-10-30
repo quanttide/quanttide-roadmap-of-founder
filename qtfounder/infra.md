@@ -7,7 +7,7 @@ audience: maintainer
 
 `qtfounder infra`：登记「什么事件、跑什么命令」，事件来了把命令交出去；CLI 自己不调度，被调用就退出。设计方向已由人澄清定案（2026-10-30），本地与云端两段验证都没跑。本节只记验证顺序与验收，不记设计争论。
 
-起因：评估 infra 平移到 qtcloud 同位置（qtcloud 的 CLI 目前是空壳）。结论是命令面形状已收敛、可以平移，卡住的是验证债。qtcloud 的组织验证另见 `index.md`「qtcloud 组织验证」节。
+起因：评估 infra 平移。目标已改（2026-10-30）：这类工具的家只能在 qtcloud-* 独立仓（qtcloud-devops 先例：接口稳定性由外部消费者给，不在产品仓内部），所以先往 qtcloud-infra，再往 qtcloud 集成，不落 qtcloud 主站。结论是命令面形状已收敛、可以平移，卡住的是验证债。qtcloud 的组织验证另见 `index.md`「qtcloud 组织验证」节。
 
 ## 设计定案
 
@@ -41,7 +41,7 @@ audience: maintainer
 
 qtcloud 的 provider 目前只有 `/healthz`，接线方不存在；「云端总线推事件 → `fire`」这条路一次都没走过。
 
-- [ ] 等 qtcloud 侧出现第一个真实事件源，把事件翻译成 `qtcloud infra fire <事件名>` 跑通一次
+- [ ] 等第一个真实事件源出现，把事件翻译成 `infra fire <事件名>` 跑通一次（宿主为 qtcloud-infra 的 CLI）
 
 达成标志：云端事件经 fire 触发一条真实订阅，与本地走的是同一条命令面。
 
