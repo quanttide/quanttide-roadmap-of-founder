@@ -19,6 +19,7 @@
 - [qtfounder/index.md](qtfounder/index.md)
 - [qtfounder/language.md](qtfounder/language.md)
 - [qtfounder/docs.md](qtfounder/docs.md)（文档审计路线图，自 CLI 仓迁入）
+- [qtfounder/infra.md](qtfounder/infra.md)（订阅登记与派发：设计定案与两段待验证）
 
 ## 约定
 

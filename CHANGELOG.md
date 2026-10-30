@@ -10,6 +10,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- `qtfounder/infra.md`：infra 路线图——设计三条已由人澄清定案（trigger 枚举对等、解释权外置、命令面只有 fire/run/emit），两段待验证（本地闭环：钩子实际绕过 infra、表全空、零测试；云端总线：provider 只有 /healthz），外加未收敛处（fire 不带载荷）的收敛条件与平移的验收标准；README 索引、myst.yml 目录与 `qtfounder/index.md` 导航行同步
+
 ### Removed
 
 - `qtgame-war/` 分区（版本路线图 index + v0.1.0–v0.3.0 共 9 篇）迁出为独立仓 `quanttide-roadmap-of-war-gaming`；README 文档索引与 `myst.yml` 目录同步

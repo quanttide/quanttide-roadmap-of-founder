@@ -5,7 +5,7 @@ audience: maintainer
 
 # qtfounder 路线图
 
-量潮创始人平台（qtfounder）。状态报告在 qtfounder 仓根的 `STATUS.md`（不进文档站），studio 的应用内步骤见该仓 `src/studio/ROADMAP.md`。
+量潮创始人平台（qtfounder）。状态报告在 qtfounder 仓根的 `STATUS.md`（不进文档站），studio 的应用内步骤见该仓 `src/studio/ROADMAP.md`；`infra`（订阅登记与派发）的方向见 [infra 路线图](infra.md)。
 
 ## CLI v0.1
 
