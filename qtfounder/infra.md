@@ -26,8 +26,8 @@ audience: maintainer
 实况（2026-10-30 查）：订阅表全空；`.githooks/pre-commit` 实际走 `qtfounder git hook run pre-commit`，绕过了 infra；user-guide 写的「`.githooks/pre-commit` 里那行 `exec qtfounder infra fire pre-commit`」在仓里没有对应物——文档描述的接线还没发生。测试零覆盖（fire / run / store 都没有）。
 
 - [x] 接线：本仓钩子改走 `infra fire`（2026-10-30，主仓 `ea32ebd`）；钩子里先 `cd` 主仓根再 fire——订阅命令不带 `--root`，靠 cwd 定位，这是 fire 不带载荷在本地的形态
+- [x] 补 fire / run / store 测试（2026-10-30）：抽出 `fire_exit`／`emit_lines`／`should_run` 三个纯函数，六条测试钉住退码语义与两种接线形状
 - [ ] 注册至少一条真实订阅，跑两周
-- [ ] 补 fire / run / store 测试
 
 达成标志（已过一轮，2026-10-30）：造一笔带禁用词的提交，经 `infra fire` 触发订阅表里的 gate，拦下退 1；`infra remove gate` 后同一笔放行，fire 打「没有订阅者」退 0——摘闸门的退路是真的。钩子改动本身那笔提交也经新链路走了一遍。剩两周观察与测试。
 
@@ -49,11 +49,15 @@ qtcloud 的 provider 目前只有 `/healthz`，接线方不存在；「云端总
 
 后置代价：本地没跑通就先接云端，出问题时无法判断是驱动方的锅还是 fire 的锅。
 
-## 未收敛处：fire 不带载荷
+## 未收敛处：fire 不带载荷（本机已验，基本收敛）
 
-`fire` 只有一个事件名，订阅的 `run` 是固定命令串，没有数据注入。今天的需求（提交闸门、夜间 cron）都够用；qtcloud 的云端事件天然带载荷（`release.published` 带版本号、`deploy.finished` 带环境名）。哪天某条订阅需要「按事件内容决定跑什么」，fire 的签名就要加东西（`--data` 或环境变量注入）。
+`fire` 只有一个事件名，订阅的 `run` 是固定命令串，没有数据注入。今天的需求（提交闸门、夜间 cron）都够用；qtcloud 的云端事件天然带载荷（`release.published` 带版本号、`deploy.finished` 带环境名）。
 
-什么情况算收敛：接的事件都是「发生了就跑、不需要知道细节」这一类，形状已收敛，平移不返工；载荷需求一旦上路线图，先在 qtfounder 侧定了 fire 的载荷语义再平移，避免两边各长一版。
+本机已有一条 Redis Streams 总线，接法与实测记在 CLI 仓 [用户指南：事件总线](../../../apps/qtfounder/src/cli/docs/user-guide/infra/event-bus.md)。`contract-changed` 这条事件推上去时带 `domain` 与 `commit`，订阅端把字段放进环境变量再调 `fire`，订阅的命令里用 `$QTFOUNDER_CONTRACT_DOMAIN` 就读到了，**`fire` 的签名一个字没改**。载荷由驱动方带，跟「触发的执行机制属于环境」是同一条。
+
+什么情况算收敛：环境变量注入够云端用就不动形状；真要显式载荷，先在 qtfounder 侧定了 fire 的载荷语义再平移，避免两边各长一版。
+
+剩的三件不在本节：发布端还没接进 `post-commit`，订阅端还没常驻，用户级契约（`~/.config/qtfounder/<域>/`）在任何仓之外没有信号源。三件都在 CLI 仓 `src/cli/ROADMAP.md` 任务一。
 
 ## 平移的验收标准
 
