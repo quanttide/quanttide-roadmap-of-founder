@@ -10,6 +10,8 @@
 
 ## [Unreleased]
 
+- 新增 qtfounder/human 路线图：绩效观测模块——不打分只对账，核心动作是校准；MVP 为 human 组 Skill，dogfood 一个季度后接 lite 入口与飞书数据源。
+
 ### Added
 
 - `qtfounder/infra.md`：设计定案节补世界观——人的目标（2026-10-30）：一个本地环境里的组件可以映射到云端的一个集群，CLI 声明触发与命令、执行机制属于环境；三条技术选择由此推出
