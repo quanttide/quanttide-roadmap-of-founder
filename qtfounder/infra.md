@@ -13,6 +13,8 @@ audience: maintainer
 
 **世界观（人的目标，2026-10-30）**：一个本地环境里的组件，可以映射到云端的一个集群——定时器本地是 crontab、云端是定时触发器；消息队列本地可部署、也可用云端。CLI 声明「什么触发、跑什么」，触发的执行机制属于环境；换环境换的是驱动方，不是 CLI。infra 的三条技术选择都是从这个目标推出来的。
 
+**灵感与顺序（2026-10-30）**：参照 CloudEvents——Serverless 传递事件的标准。方向是从事件开始建整套逻辑基础设施（计算、存储、网络、触发器），不是只做事件；但进入顺序定为事件第一块——它已攒够两个真实实例（本地 git 钩子与 crontab，云端总线在后），其余部件等各自的第二个真实实现出现再收，不提前设计一整套抽象。载荷若真来，参照 CloudEvents 的信封形状（id、source、type、data 可选）定 fire 的扩展，不自创字段。
+
 以下三条是定案，不是待办，不因验证结果回炉：
 
 - **trigger 是带标签的枚举，event 与 every 形状对等**。云端总线来的时候没有「周期」概念，只有事件；周期只是驱动方的一种投递方式。表结构不改一个字段就能被云端消费
@@ -55,7 +57,7 @@ qtcloud 的 provider 目前只有 `/healthz`，接线方不存在；「云端总
 
 本机已有一条 Redis Streams 总线，接法与实测记在 CLI 仓 [用户指南：事件总线](../../../apps/qtfounder/src/cli/docs/user-guide/infra/event-bus.md)。`contract-changed` 这条事件推上去时带 `domain` 与 `commit`，订阅端把字段放进环境变量再调 `fire`，订阅的命令里用 `$QTFOUNDER_CONTRACT_DOMAIN` 就读到了，**`fire` 的签名一个字没改**。载荷由驱动方带，跟「触发的执行机制属于环境」是同一条。
 
-什么情况算收敛：环境变量注入够云端用就不动形状；真要显式载荷，先在 qtfounder 侧定了 fire 的载荷语义再平移，避免两边各长一版。
+什么情况算收敛：环境变量注入够云端用就不动形状；真要显式载荷，参照 CloudEvents 的信封形状（id、source、type、data 可选）定——infra 的灵感本就来自它，载荷也走它的答案，不自创字段；先在 qtfounder 侧定了再平移，避免两边各长一版。
 
 剩的三件不在本节：发布端还没接进 `post-commit`，订阅端还没常驻，用户级契约（`~/.config/qtfounder/<域>/`）在任何仓之外没有信号源。三件都在 CLI 仓 `src/cli/ROADMAP.md` 任务一。
 
