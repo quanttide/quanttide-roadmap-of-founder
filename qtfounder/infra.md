@@ -23,11 +23,13 @@ audience: maintainer
 
 实况（2026-10-30 查）：订阅表全空；`.githooks/pre-commit` 实际走 `qtfounder git hook run pre-commit`，绕过了 infra；user-guide 写的「`.githooks/pre-commit` 里那行 `exec qtfounder infra fire pre-commit`」在仓里没有对应物——文档描述的接线还没发生。测试零覆盖（fire / run / store 都没有）。
 
-- [ ] 接线：本仓钩子改走 `infra fire`，或先弄清 `git hook run` 与 `infra fire` 的关系后把两处文档改到与实况一致
+- [x] 接线：本仓钩子改走 `infra fire`（2026-10-30，主仓 `ea32ebd`）；钩子里先 `cd` 主仓根再 fire——订阅命令不带 `--root`，靠 cwd 定位，这是 fire 不带载荷在本地的形态
 - [ ] 注册至少一条真实订阅，跑两周
 - [ ] 补 fire / run / store 测试
 
-达成标志：一次真实的提交闸门拦截经 `infra fire` 触发，且发生在订阅表里。
+达成标志（已过一轮，2026-10-30）：造一笔带禁用词的提交，经 `infra fire` 触发订阅表里的 gate，拦下退 1；`infra remove gate` 后同一笔放行，fire 打「没有订阅者」退 0——摘闸门的退路是真的。钩子改动本身那笔提交也经新链路走了一遍。剩两周观察与测试。
+
+观察期待看的：日常提交没有误拦漏拦；另一台机器拉到新钩子但没登记订阅时，闸门会静默放行（fire 的立场，不是故障）——这正是反向退路的日常形态。
 
 顺序理由：「本地和云端同一条入口」是这个设计的核心卖点，本地这一半从未接线；没接线就平移，qtcloud 得到的是从未跑过一轮的骨架。
 
