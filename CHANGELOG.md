@@ -10,6 +10,10 @@
 
 ## [Unreleased]
 
+### Removed
+
+- `qtgame-war/` 分区（版本路线图 index + v0.1.0–v0.3.0 共 9 篇）迁出为独立仓 `quanttide-roadmap-of-war-gaming`；README 文档索引与 `myst.yml` 目录同步
+
 ### 变更
 
 - `qtfounder/index.md`：退出码收口的代码部分已完成（CLI `core` 模块、四码常量、目标缺席退 3），该行改标余冻结验收；落点此前已从 toolkit 改为 CLI 仓

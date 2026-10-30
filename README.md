@@ -19,7 +19,6 @@
 - [qtfounder/index.md](qtfounder/index.md)
 - [qtfounder/language.md](qtfounder/language.md)
 - [qtfounder/docs.md](qtfounder/docs.md)（文档审计路线图，自 CLI 仓迁入）
-- [qtgame-war/index.md](qtgame-war/index.md)（版本路线图入口，v0.1.0–v0.3.0 各版本文件在其下）
 
 ## 约定
 
