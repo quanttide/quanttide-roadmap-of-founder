@@ -11,6 +11,7 @@
 ## [Unreleased]
 
 - 新增 qtfounder/human 路线图：绩效观测模块——不打分只对账，核心动作是校准；MVP 为 human 组 Skill，dogfood 一个季度后接 lite 入口与飞书数据源。
+- qtfounder/human 范围补一条：产出走事件不走现拉——真产出推本机总线（infra 的 Redis Streams），Skill 从消费组取积压；传播动作不推，首周四成噪音从源头不产生，危机周跳过校准事件不丢。CLI 仓 ROADMAP 任务一同步：human 产出事件与契约变更共用同一个发布端，不建第二条管道。
 
 ### Added
 
