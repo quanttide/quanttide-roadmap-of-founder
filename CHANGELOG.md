@@ -12,6 +12,7 @@
 
 ### Added
 
+- `qtfounder/infra.md`：设计定案节补世界观——人的目标（2026-10-30）：一个本地环境里的组件可以映射到云端的一个集群，CLI 声明触发与命令、执行机制属于环境；三条技术选择由此推出
 - `qtfounder/infra.md`：本地闭环接线勾选——钩子改走 `infra fire`（主仓 `ea32ebd`），故意失败探针拦下退 1、摘订阅后放行，达成标志过了一轮；余两周观察与测试，观察期待看的是另一台机器没登记订阅时闸门静默放行（fire 的立场，不是故障）
 - `qtfounder/infra.md`：infra 路线图——设计三条已由人澄清定案（trigger 枚举对等、解释权外置、命令面只有 fire/run/emit），两段待验证（本地闭环：钩子实际绕过 infra、表全空、零测试；云端总线：provider 只有 /healthz），外加未收敛处（fire 不带载荷）的收敛条件与平移的验收标准；README 索引、myst.yml 目录与 `qtfounder/index.md` 导航行同步
 
