@@ -73,8 +73,18 @@ audience: maintainer
 
 ### 资产结构
 
-- [ ] 公开和私有第二大脑都有 fiction 和 memory，且前者是成品，后者是素材；搭建一个稳定且显式的结构有利于同构维护
+- [ ] 公开和私有第二大脑都有 fiction 和 memory，且前者是成品，后者是素材；搭建一个稳定且显式的结构有利于同构维护（作废：fiction/memory 已废弃，2026-11-04）
 
 ### 创意写作
 
-- [ ] fiction 都来源于 memory，且私有的结构还没有完全建立起来；需要一个精细的结构来加工它
+- [ ] fiction 都来源于 memory，且私有的结构还没有完全建立起来；需要一个精细的结构来加工它（作废：fiction/memory 已废弃，2026-11-04）
+
+## 待删除
+
+fiction/memory 架构已废弃（2026-11-04 定；同步自 qtfounder 仓 `docs/dev-guide/roadmap.md` 同节）。只记录不动手，处理时机另定：
+
+- [ ] qtfounder `src/provider/` 整模块：`main.go` 起就要求 `QTFOUNDER_FICTION_PATH` / `QTFOUNDER_MEMORY_PATH`，chapters / memory 两 API 就是这套架构
+- [ ] qtfounder `src/site/` 创作数据五处（都在 `src/site/src/` 下）：`data/works.ts`、`data/streams.ts`、`data/activities.ts`、`App.tsx`、`pages/WorkDetail.tsx`
+- [ ] qtfounder `docs/` 五篇：`user-guide/index.md`、`dev-guide/index.md`、`dev-guide/roadmap.md`、`api-reference/index.md`、`api-reference/provider.md`
+
+qtfounder 仓根四文档（AGENTS/CONTRIBUTING/README/STATUS）已同步标待删除，不进这份待办。
