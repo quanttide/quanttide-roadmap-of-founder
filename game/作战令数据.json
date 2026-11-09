@@ -1,0 +1,139 @@
+{
+  "schema_version": "0.1",
+  "note": "战棋游戏用结构化样例。地名/时间/番号已游戏化，史料母本见《豫东战役_作战指令模板.md》。",
+  "field_spec": {
+    "Order": ["meta", "sec_a", "sec_b", "sec_c", "sec_d", "time_marks", "boundary", "deviation"],
+    "meta": ["order_id", "title", "issuer", "issued_at", "kind", "ref", "report_policy", "effective"],
+    "kind": ["PRESET", "ATTACK", "ADJUST", "CEASE"],
+    "report_policy": ["REPORT_FIRST", "ACT_THEN_REPORT"],
+    "TaskUnit": ["unit_id", "command_chain", "verb", "target", "start_at", "end_condition", "support", "constraint"],
+    "time_marks": ["open_move", "h_zero"],
+    "sec_c_overrides": "victory_condition"
+  },
+  "verb_registry": [
+    {"verb": "包围/合围", "settles": "目标格相邻控制数 >= N", "failure": "敌突围，退路判定失败"},
+    {"verb": "攻占", "settles": "据点耐久 - 攻坚值", "failure": "顿挫，疲劳+1"},
+    {"verb": "阻援/坚决阻击", "settles": "阻援场生效，敌援移动力 -X", "failure": "援敌穿透，主攻受夹"},
+    {"verb": "钳制/攻势钳制", "settles": "不判歼灭，敌错觉值 +X", "failure": "敌识破，分兵权重回正"},
+    {"verb": "分割", "settles": "切断两敌部连通", "failure": "两部靠拢，合围破产"},
+    {"verb": "截击/截断靠拢", "settles": "移动中敌军触发遭遇战", "failure": "目标合流，难度升级"},
+    {"verb": "破击（交通）", "settles": "敌补给/增援速率 -X", "failure": "援敌提前到场"},
+    {"verb": "待机", "settles": "不消耗，保留主要突击方向", "failure": "错过窗口"},
+    {"verb": "北撤/休整", "settles": "脱离接触，结束关卡", "failure": "贪战导致战损失控"},
+    {"verb": "继承(ref)", "settles": "载入 ref 指向令的 sec_d", "failure": "无"}
+  ],
+  "orders": [
+    {
+      "meta": {
+        "order_id": "YD-0615-01",
+        "title": "作战部署命令",
+        "issuer": ["粟裕", "陈士榘", "张震"],
+        "issued_at": "T0 12:00",
+        "kind": "PRESET",
+        "ref": null,
+        "report_policy": "ACT_THEN_REPORT",
+        "effective": "即刻",
+        "source_note": "1948.6.15 12时，转兵豫东、先取开封"
+      },
+      "sec_a": "整五军集结鲁西南，正面寻战不利；开封守备空虚。",
+      "sec_b": "中野方向牵制平汉线之敌；地武破击陇海。",
+      "sec_c": "放弃在鲁西南硬打整五军，转兵豫东，先取开封，尔后待机打援。",
+      "sec_d": [
+        {"unit_id": "三纵、八纵", "command_chain": "归陈唐指挥", "verb": "包围/合围", "target": "开封", "start_at": "T0 黄昏", "end_condition": "完成对开封合围", "support": [], "constraint": "T1 黄昏前完成"},
+        {"unit_id": "三纵、八纵", "command_chain": "归陈唐指挥", "verb": "攻占", "target": "开封", "start_at": "T1", "end_condition": "据点耐久归零", "support": [], "constraint": null},
+        {"unit_id": "一纵、四纵、六纵", "command_chain": "野司直接指挥", "verb": "阻援/坚决阻击", "target": "曹县东南阻援线", "start_at": "T0 黄昏", "end_condition": "主攻方向结束", "support": [], "constraint": null},
+        {"unit_id": "其余各部", "command_chain": "野司直接指挥", "verb": "待机", "target": "主要突击方向", "start_at": "T1", "end_condition": "解锁", "support": [], "constraint": "第一日暂不使用"}
+      ],
+      "time_marks": {"open_move": "T0 黄昏", "h_zero": "T1"},
+      "boundary": ["Layer-02 曹县—开封线"],
+      "deviation": []
+    },
+    {
+      "meta": {
+        "order_id": "YD-0627-01",
+        "title": "围歼区寿年兵团作战命令",
+        "issuer": ["粟裕", "陈士榘", "张震"],
+        "issued_at": "T3 夜",
+        "kind": "ATTACK",
+        "ref": null,
+        "report_policy": "REPORT_FIRST",
+        "effective": "即刻",
+        "source_note": "1948.6.27 夜，睢杞阶段合围令"
+      },
+      "sec_a": "区寿年兵团与邱兵团之间出现间隙。",
+      "sec_b": "中野方向钳制胡琏部；请友邻阻十八军东调。",
+      "sec_c": "分割包围区寿年兵团，切断其与邱兵团联系。",
+      "sec_d": [
+        {"unit_id": "突击集团", "command_chain": "野司直接指挥", "verb": "分割", "target": "区寿年—邱兵团接合部", "start_at": "T3 夜", "end_condition": "连通切断", "support": ["特纵炮兵一部"], "constraint": null},
+        {"unit_id": "十纵并广纵", "command_chain": "归十纵宋司令", "verb": "阻援/坚决阻击", "target": "杞县东北", "start_at": "T3 夜", "end_condition": "主攻结束", "support": [], "constraint": null},
+        {"unit_id": "三纵、八纵", "command_chain": "野司直接指挥", "verb": "钳制/攻势钳制", "target": "葛岗—黑木集线", "start_at": "T3 夜", "end_condition": "主攻结束", "support": [], "constraint": null}
+      ],
+      "time_marks": {"open_move": "T3 夜", "h_zero": "T4"},
+      "boundary": ["Layer-05 杞县分界线"],
+      "deviation": []
+    },
+    {
+      "meta": {
+        "order_id": "YD-0628-01",
+        "title": "今晚出击部署（调整令）",
+        "issuer": ["粟裕", "陈士榘", "张震"],
+        "issued_at": "T4 未时",
+        "kind": "ADJUST",
+        "ref": "YD-0627-01",
+        "report_policy": "REPORT_FIRST",
+        "effective": "即刻",
+        "source_note": "1948.6.28 未时，因敌收缩重排突击集团"
+      },
+      "sec_a": "区寿年部收缩，原合围口失效。",
+      "sec_b": "不变（继承 YD-0627-01）。",
+      "sec_c": "重排突击集团，改由十纵统一指挥部分方向。",
+      "sec_d": [
+        {"unit_id": "四纵", "command_chain": "归十纵宋司令", "verb": "攻占", "target": "涧岗集、陈小楼方向", "start_at": "T4", "end_condition": "达成", "support": [], "constraint": "作战分界线另电告"},
+        {"unit_id": "一纵", "command_chain": "野司直接指挥", "verb": "攻占", "target": "由东南向西北", "start_at": "T4", "end_condition": "达成", "support": [], "constraint": null},
+        {"unit_id": "六纵", "command_chain": "野司直接指挥", "verb": "截击/截断靠拢", "target": "裴村店线向东北", "start_at": "T4", "end_condition": "达成", "support": [], "constraint": null},
+        {"unit_id": "其余未列各部", "command_chain": "继承", "verb": "继承(ref)", "target": "YD-0627-01.sec_d", "start_at": "T4", "end_condition": "随前令", "support": [], "constraint": "任务不变"}
+      ],
+      "time_marks": {"open_move": "T4 未时", "h_zero": "T4 夜"},
+      "boundary": ["Layer-05 重算"],
+      "deviation": []
+    },
+    {
+      "meta": {
+        "order_id": "YD-0707-01",
+        "title": "放弃续歼、北撤休整令",
+        "issuer": ["粟裕", "陈士榘", "唐亮", "张震"],
+        "issued_at": "T6",
+        "kind": "CEASE",
+        "ref": null,
+        "report_policy": "ACT_THEN_REPORT",
+        "effective": "即刻",
+        "source_note": "1948.7.7 前后，因援敌迫近决定停战北撤"
+      },
+      "sec_a": "邱、黄、胡琏各部迫近，部队连续作战疲劳。",
+      "sec_b": "友邻方向已无力再钳制。",
+      "sec_c": "放弃对二十五师等部之作战，北撤民权、考城、菏泽、曹县、定陶地区休整。",
+      "sec_d": [
+        {"unit_id": "全军", "command_chain": "野司直接指挥", "verb": "北撤/休整", "target": "民权—定陶地区", "start_at": "T6", "end_condition": "脱离接触", "support": [], "constraint": "不得恋战"}
+      ],
+      "time_marks": {"open_move": "T6 当夜", "h_zero": null},
+      "boundary": [],
+      "deviation": []
+    }
+  ],
+  "turn_table": [
+    {"turn": "T0", "anchor": "6.15 12时", "order": "YD-0615-01", "intent_switch": "放弃打整五军 → 攻开封", "player_decision": "批不批先斩后奏", "settles": "开进路线、阻援线布置"},
+    {"turn": "T1", "anchor": "6.16 晚", "order": null, "intent_switch": "攻城", "player_decision": "攻坚与阻援兵力分配", "settles": "据点判定"},
+    {"turn": "T2", "anchor": "6.22", "order": null, "intent_switch": "弃城打援", "player_decision": "战利品要不要、转不转睢杞", "settles": "战果/疲劳值"},
+    {"turn": "T3", "anchor": "6.27 夜", "order": "YD-0627-01", "intent_switch": "歼区兵团", "player_decision": "合围口选哪", "settles": "分割判定"},
+    {"turn": "T4", "anchor": "6.28 未", "order": "YD-0628-01", "intent_switch": "敌收缩 → 重排突击集团", "player_decision": "改指挥链", "settles": "分界线重算"},
+    {"turn": "T5", "anchor": "7月初", "order": null, "intent_switch": "转打黄百韬", "player_decision": "是否继续加码", "settles": "援敌迫近压力"},
+    {"turn": "T6", "anchor": "7.7", "order": "YD-0707-01", "intent_switch": "放弃续歼", "player_decision": "主动停手（核心关）", "settles": "保存兵力 vs 贪战损"}
+  ],
+  "event_cards": [
+    {"id": "EV-01", "name": "请示不及，已令各部执行", "effect": "+主动权 / -政治点数，军委下回合追认"},
+    {"id": "EV-02", "name": "敌收缩", "effect": "强制进入调整令，作废部分 sec_d"},
+    {"id": "EV-03", "name": "援敌迫近（邱/黄/胡琏）", "effect": "压力计时器 +1"},
+    {"id": "EV-04", "name": "友邻钳制生效", "effect": "中野方向减援，sec_b 兑现"},
+    {"id": "EV-05", "name": "疲劳累积", "effect": "连续两回合不待机，攻坚值递减"}
+  ]
+}

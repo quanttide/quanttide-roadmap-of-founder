@@ -20,6 +20,8 @@
 - [qtfounder/language.md](qtfounder/language.md)
 - [qtfounder/docs.md](qtfounder/docs.md)（文档审计路线图，自 CLI 仓迁入）
 - [qtfounder/infra.md](qtfounder/infra.md)（订阅登记与派发：设计定案与两段待验证）
+- [game/作战令.md](game/作战令.md)（战棋切入点：三层链路与豫东四关）
+- [game/豫东战役_作战指令模板_433230FA-126F-4378-9568-3B8260CE4B5E.md](game/豫东战役_作战指令模板_433230FA-126F-4378-9568-3B8260CE4B5E.md)（豫东作战指令模板 v0.1，配套 作战令数据.json 与 photo.png）
 
 ## 约定
 

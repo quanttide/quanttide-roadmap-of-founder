@@ -12,6 +12,10 @@ project:
     - file: qtfounder/language.md
     - file: qtfounder/docs.md
     - file: qtfounder/infra.md
+    - title: 战棋
+      children:
+        - file: game/作战令.md
+        - file: game/豫东战役_作战指令模板_433230FA-126F-4378-9568-3B8260CE4B5E.md
 site:
   template: book-theme
   options:
