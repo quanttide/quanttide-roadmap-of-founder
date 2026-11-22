@@ -10,6 +10,7 @@
 
 ## [Unreleased]
 
+- `default/冥想音频.md`：冥想音频方向，自 `data/context` 按资产契约迁入
 - qtfounder 路线图标记 fiction/memory 废弃：`qtfounder/index.md` 新增「待删除」节（provider 整模块、site 创作数据五处、docs 五篇），「新增」下资产结构与创意写作两条计划标作废；与 qtfounder 仓 `docs/dev-guide/roadmap.md` 同步
 
 - 新增 qtfounder/human 路线图：绩效观测模块——不打分只对账，核心动作是校准；MVP 为 human 组 Skill，dogfood 一个季度后接 lite 入口与飞书数据源。
